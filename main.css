@@ -1,3 +1,38 @@
 body {
   background-color: rgb(15, 18, 24);
 }
+
+#navBar {
+  border: 1px solid red;
+  margin: -80.2vh auto auto 31vw;
+  height: 4.7vh;
+  width: 53.05vw;
+}
+
+#profileAreaWrapper {
+  border: 1px solid red;
+  margin: 5vh auto auto 15vw;
+  height: 80vh;
+  width: 15.3vw;
+}
+
+#dataDiv {
+  border: 1px solid red;
+  margin: 1.2vh auto auto 31vw;
+  height: 40vh;
+  width: 53.05vw;
+}
+
+#formCreate {
+  border: 1px solid red;
+  margin: 1.2vh auto auto 31vw;
+  height: 32.4vh;
+  width: 53.05vw;
+}
+
+footer {
+  border: 1px solid red;
+  margin: 4.9vh auto auto 15vw;
+  height: 4.7vh;
+  width: 69.1vw;
+}
