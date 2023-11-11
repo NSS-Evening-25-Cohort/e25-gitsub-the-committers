@@ -9,7 +9,7 @@ body {
   width: 53.05vw;
 }
 
-#profileAreaWrapper {
+#app {
   border: 1px solid red;
   margin: 5vh auto auto 15vw;
   height: 80vh;
