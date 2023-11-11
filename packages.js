@@ -69,13 +69,18 @@ const createPackage = (event) => {
     // New package
     const newPackage = {
         id: packages.length + 1,
+        packageName: document.querySelector("#package-name").value,
         description: document.querySelector("#package-description").value
     }
 
     // Push new package to packages
     packages.push(newPackage);
+    // console.log(newPackage);
     // Render packages to DOM
     renderPackagesToDOM("#packages", packages);
     // Reset the form
     document.querySelector('form').reset();
 }
+
+// Event listener
+document.querySelector("#create-package-btn").addEventListener("click", createPackage);
