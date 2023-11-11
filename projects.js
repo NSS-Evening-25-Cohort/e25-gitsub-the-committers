@@ -39,7 +39,7 @@ const projects =  [
   }
 ]
 
-const renderToDom = (profiles) => {
+const renderToDom = (profiles, projects) => {
   let domString = '';
   for (const profile of profiles) {
     domString += `
@@ -84,10 +84,28 @@ const renderToDom = (profiles) => {
   prjCrds.innerHTML = projString;
 };
 
-renderToDom(profiles);
+
+
+const form = document.querySelector("form")
+
+const createProject = (event) => {
+event.preventDefault()
+
+  const newProject = {
+       id: projects.length + 1,
+       Name: document.querySelector('#prjName').value,
+       Des: document.querySelector('#prjDes').value
+  };
+  projects.push(newProject)
+  renderToDom(profiles, projects)
+  form.reset()
+};
+
+ 
 
 const startApp = () => {
   renderToDom(profiles, projects);
 };
 
-startApp();
+renderToDom(profiles, projects);
+form.addEventListener('submit', createProject)
