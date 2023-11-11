@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Packages</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="packages"></div>
+    <div id="create-project-form">
+        <form>
+            <h4>Create a new project</h4>
+            <p>
+                Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.
+            </p>
+            <label for="proj-name" class="form-label">Project board name</label>
+            <input type="text" class="form-control" id="proj-name" placeholder="Example">
+
+            <label for="proj-description" class="form-label">Description (optional)</label>
+            <input type="text" class="form-control" id="proj-description"></input>
+
+            <button type="button" id="create-proj-btn">Create project</button>
+        </form>
+    </div>
+    
+    <script src="packages.js"></script>
+    <script src="database.js"></script>
+    <script src="scripts.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
