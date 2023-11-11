@@ -3,10 +3,25 @@ body {
 }
 
 #navBar {
-  border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
   margin: -80.2vh auto auto 31vw;
   height: 4.7vh;
   width: 53.05vw;
+}
+
+
+#navBar a {
+  color: rgb(109, 119, 129);
+  font-size: 22px;
+  text-decoration: none;
+  padding-top: 1.2vh;
+
+  transition: 0.5s ease all;
+}
+
+#navBar a:hover {
+  border-bottom: 1px solid red;
 }
 
 #app {
@@ -14,6 +29,7 @@ body {
   margin: 5vh auto auto 15vw;
   height: 80vh;
   width: 15.3vw;
+  color: white;
 }
 
 #dataDiv {
@@ -31,8 +47,28 @@ body {
 }
 
 footer {
-  border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
   margin: 4.9vh auto auto 15vw;
   height: 4.7vh;
   width: 69.1vw;
+}
+
+footer p {
+  color: rgb(109, 119, 129);
+  font-size: 11px;
+  padding-top: 0.5vh;
+}
+
+footer a {
+  color: rgb(89, 166, 255);
+  font-size: 14px;
+  text-decoration: none;
+  padding-top: 1.2vh;
+}
+
+#profile {
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
 }
