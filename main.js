@@ -21,6 +21,24 @@ const profiles = [
   }
 ];
 
+const projects =  [
+  {
+    id: 1,
+    Name: "Jazz Journey's",
+    Des: "Exploring the butterfly effect of Jazz from the great depression through the modern era and how it has helped shaped today's musical landscape"
+  },
+  {
+    id: 2,
+    Name: "Funkadelic Soundwaves",
+    Des: "Gathering data from the icons of the disco era to assess the effects of the true freedom revolution on the descendatnts of its stars"
+  },
+  {
+    id: 3,
+    Name: "Electronic Euphoria",
+    Des: "Starting in the 90's, EDM started an uneasy riot in the bowels of the American Grunge scene, this study is meant to uncover how large of an effect this had on the mixed genre's of the modern day."
+  }
+]
+
 const renderToDom = (profiles) => {
   let domString = '';
   for (const profile of profiles) {
@@ -47,14 +65,27 @@ const renderToDom = (profiles) => {
         <p id="orgs"><h4>Organizations/Affiliations</h4>${profile.organizations}</p>
       </div>`;
   }
+  let projString = "";
+  for ( const project of projects) { 
+    projString += `<div id="projcard" class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">${project.Name}</h5>
+    <p class="card-text">${project.Des}</p>
+</div>
+</div>`
+  }
+
   const app = document.querySelector("#app");
   app.innerHTML = domString;
+
+  const prjCrds = document.querySelector("#prjCrds")
+  prjCrds.innerHTML = projString;
 };
 
 renderToDom(profiles);
 
 const startApp = () => {
-  renderToDom(profiles);
+  renderToDom(profiles, projects);
 };
 
 startApp();
