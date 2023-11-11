@@ -30,7 +30,7 @@ const projects =  [
   {
     id: 2,
     Name: "Funkadelic Soundwaves",
-    Des: "Gathering data from the icons of the disco era to assess the effects of the true freedom revolution on the descendatnts of its stars"
+    Des: "Gathering data from the icons of the disco era to assess the effects of the true freedom revolution on the descendants of its stars"
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const projects =  [
   }
 ]
 
-const renderToDom = (profiles) => {
+const renderToDom = (profiles, projects) => {
   let domString = '';
   for (const profile of profiles) {
     domString += `
@@ -67,12 +67,14 @@ const renderToDom = (profiles) => {
   }
   let projString = "";
   for ( const project of projects) { 
-    projString += `<div id="projcard" class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${project.Name}</h5>
-    <p class="card-text">${project.Des}</p>
-</div>
-</div>`
+    projString += `<ol class="list-group list-group-numbered">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">${project.Name}</div>
+        ${project.Des}
+      </div>
+    </li>
+  </ol>`
   }
 
   const app = document.querySelector("#app");
@@ -82,10 +84,28 @@ const renderToDom = (profiles) => {
   prjCrds.innerHTML = projString;
 };
 
-renderToDom(profiles);
+
+
+const form = document.querySelector("form")
+
+const createProject = (event) => {
+event.preventDefault()
+
+  const newProject = {
+       id: projects.length + 1,
+       Name: document.querySelector('#prjName').value,
+       Des: document.querySelector('#prjDes').value
+  };
+  projects.push(newProject)
+  renderToDom(profiles, projects)
+  form.reset()
+};
+
+ 
 
 const startApp = () => {
   renderToDom(profiles, projects);
 };
 
-startApp();
+renderToDom(profiles, projects);
+form.addEventListener('submit', createProject)
