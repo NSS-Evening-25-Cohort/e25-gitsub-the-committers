@@ -61,5 +61,21 @@ const renderPackagesToDOM = (divID, array) => {
 renderPackagesToDOM("#packages", packages);
 
 /*
-========================== Create Package Button ==========================
+========================== Create Package ==========================
 */
+const createPackage = (event) => {
+    event.preventDefault();
+
+    // New package
+    const newPackage = {
+        id: packages.length + 1,
+        description: document.querySelector("#package-description").value
+    }
+
+    // Push new package to packages
+    packages.push(newPackage);
+    // Render packages to DOM
+    renderPackagesToDOM("#packages", packages);
+    // Reset the form
+    document.querySelector('form').reset();
+}
