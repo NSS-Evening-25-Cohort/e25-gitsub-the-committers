@@ -77,14 +77,14 @@ const renderToDom = (profiles, projects) => {
   }
   let projString = "";
   for ( const project of projects) { 
-    projString += `<ol class="list-group list-group-numbered">
+    projString += `<ul class="list-group list-group-item">
     <li class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto">
         <div class="fw-bold">${project.Name}</div>
         ${project.Des}
       </div>
     </li>
-  </ol>`
+  </ul>`
   }
 
   const app = document.querySelector("#app");
