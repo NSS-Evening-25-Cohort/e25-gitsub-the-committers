@@ -30,3 +30,32 @@ const packages = [
         description: "A single place for your team to manage Docker images and decide who can see and access your images."
     }
 ];
+
+/*
+========================== Render Packages to DOM ==========================
+*/
+const renderPackagesToDOM = (divID, array) => {
+    let domString = "";
+
+    // Looping through array
+    array.forEach(package => {
+        // Store HTML to domString
+        domString += `
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">${package.packageName}</h5>
+                <p class="card-text">${package.description}</p>
+                <button type="button">Learn more</button>
+            </div>
+        </div>
+        `;
+    });
+
+    // Target divID
+    const package = document.querySelector(divID);
+    // Render to DOM
+    package.innerHTML = domString;
+};
+
+// Render to DOM
+renderPackagesToDOM("#packages", packages);
