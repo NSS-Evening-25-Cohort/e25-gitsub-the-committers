@@ -59,3 +59,7 @@ const renderPackagesToDOM = (divID, array) => {
 
 // Render to DOM
 renderPackagesToDOM("#packages", packages);
+
+/*
+========================== Create Package Button ==========================
+*/
