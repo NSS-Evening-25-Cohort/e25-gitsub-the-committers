@@ -4,7 +4,8 @@ body {
 
 #navBar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; 
+  border: 1px solid red;
   margin: -80.2vh auto auto 31vw;
   height: 4.7vh;
   width: 53.05vw;
@@ -33,14 +34,14 @@ body {
 }
 
 #dataDiv {
-  border: 1px solid red;
+  border: 1px solid rgb(0, 68, 255);
   margin: 1.2vh auto auto 31vw;
   height: 40vh;
   width: 53.05vw;
 }
 
 #formCreate {
-  border: 1px solid red;
+  border: 1px solid rgb(229, 255, 0);
   margin: 1.2vh auto auto 31vw;
   height: 32.4vh;
   width: 53.05vw;
@@ -71,4 +72,10 @@ footer a {
   height: 100%;
   width: 100%;
   font-size: 12px;
+}
+
+#test {
+  height: 300px;
+  width: 300px;
+  border: 1px solid orange;
 }
