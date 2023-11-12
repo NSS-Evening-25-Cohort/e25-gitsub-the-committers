@@ -36,6 +36,16 @@ const projects =  [
     id: 3,
     Name: "Electronic Euphoria",
     Des: "Starting in the 90's, EDM started an uneasy riot in the bowels of the American Grunge scene, this study is meant to uncover how large of an effect this had on the mixed genre's of the modern day."
+  },
+  {
+  id: 4,
+  Name: "Country Classics",
+  Des: "Looking over the effects of country music from early twentieth century and how it relates to the different mixes of the genre today."
+  }, 
+  {
+   id: 5,
+   Name: "Rapolympics",
+   Des: "A unique view of hip hop culture and the way it has changed from the 80's to present day based on the artists and word play development."
   }
 ]
 
@@ -67,14 +77,14 @@ const renderToDom = (profiles, projects) => {
   }
   let projString = "";
   for ( const project of projects) { 
-    projString += `<ol class="list-group list-group-numbered">
+    projString += `<ul class="list-group list-group-item">
     <li class="list-group-item d-flex justify-content-between align-items-start">
       <div class="ms-2 me-auto">
         <div class="fw-bold">${project.Name}</div>
         ${project.Des}
       </div>
     </li>
-  </ol>`
+  </ul>`
   }
 
   const app = document.querySelector("#app");

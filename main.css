@@ -36,6 +36,7 @@ body {
   margin: 1.2vh auto auto 31vw;
   height: 40vh;
   width: 53.05vw;
+  overflow-y: auto;
 }
 
 #formCreate {
