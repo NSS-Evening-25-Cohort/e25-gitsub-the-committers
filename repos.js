@@ -25,7 +25,9 @@ const repos = [
 ]
 
 
-const repoDiv = document.querySelector("#repoCards");
+const dataDiv = document.querySelector("#repoCards");
+
+
 
 const cardsOnDom = (repos) => {
   let domString ="";
@@ -40,14 +42,34 @@ const cardsOnDom = (repos) => {
   </div>`
   }
 
-  repoDiv.innerHTML = domString;
+
+  dataDiv.innerHTML = domString;
   
 };
 
 cardsOnDom(repos);
 
-const form = document.querySelector("#repoForm")
 
+const form = document.querySelector("form");
+
+const createNewRepo = (e) => {
+  e.preventDefault();
+
+  const newRepo = {
+  title: document.querySelector("#title").value,
+  textContent: document.querySelector("#textContent").value,
+}
+
+repos.push(newRepo);
+cardsOnDom(repos);
+form.reset();
+
+}
+
+form.addEventListener("submit", createNewRepo);
+
+
+/*const form = document.querySelector("form")
 form.addEventListener ("submit", (event) => {
   event.preventDefault();
   
@@ -59,4 +81,4 @@ form.addEventListener ("submit", (event) => {
   repos.push(newRepo);
   cardsOnDom(repos);
   form.reset();
-})
+})*/
