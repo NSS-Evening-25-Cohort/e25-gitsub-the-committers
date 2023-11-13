@@ -30,16 +30,26 @@ const projects =  [
   {
     id: 2,
     Name: "Funkadelic Soundwaves",
-    Des: "Gathering data from the icons of the disco era to assess the effects of the true freedom revolution on the descendatnts of its stars"
+    Des: "Gathering data from the icons of the disco era to assess the effects of the true freedom revolution on the descendants of its stars"
   },
   {
     id: 3,
     Name: "Electronic Euphoria",
     Des: "Starting in the 90's, EDM started an uneasy riot in the bowels of the American Grunge scene, this study is meant to uncover how large of an effect this had on the mixed genre's of the modern day."
+  },
+  {
+  id: 4,
+  Name: "Country Classics",
+  Des: "Looking over the effects of country music from early twentieth century and how it relates to the different mixes of the genre today."
+  }, 
+  {
+   id: 5,
+   Name: "Rapolympics",
+   Des: "A unique view of hip hop culture and the way it has changed from the 80's to present day based on the artists and word play development."
   }
 ]
 
-const renderToDom = (profiles) => {
+const renderToDom = (profiles, projects) => {
   let domString = '';
   for (const profile of profiles) {
     domString += `
@@ -67,12 +77,14 @@ const renderToDom = (profiles) => {
   }
   let projString = "";
   for ( const project of projects) { 
-    projString += `<div id="projcard" class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${project.Name}</h5>
-    <p class="card-text">${project.Des}</p>
-</div>
-</div>`
+    projString += `<ul class="list-group list-group-item">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">${project.Name}</div>
+        ${project.Des}
+      </div>
+    </li>
+  </ul>`
   }
 
   const app = document.querySelector("#app");
@@ -82,10 +94,28 @@ const renderToDom = (profiles) => {
   prjCrds.innerHTML = projString;
 };
 
-renderToDom(profiles);
+
+
+const form = document.querySelector("form")
+
+const createProject = (event) => {
+event.preventDefault()
+
+  const newProject = {
+       id: projects.length + 1,
+       Name: document.querySelector('#prjName').value,
+       Des: document.querySelector('#prjDes').value
+  };
+  projects.push(newProject)
+  renderToDom(profiles, projects)
+  form.reset()
+};
+
+ 
 
 const startApp = () => {
   renderToDom(profiles, projects);
 };
 
-startApp();
+renderToDom(profiles, projects);
+form.addEventListener('submit', createProject)
