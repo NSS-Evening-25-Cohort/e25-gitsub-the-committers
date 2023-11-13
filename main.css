@@ -5,7 +5,7 @@ body {
 #navBar {
   display: flex;
   justify-content: space-around; 
-  margin: -85.2vh auto auto 31vw;
+  margin: -84.2vh auto auto 31vw;
   height: 4.7vh;
   width: 53.05vw;
 }
