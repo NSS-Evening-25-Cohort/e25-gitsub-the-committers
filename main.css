@@ -5,7 +5,7 @@ body {
 #navBar {
   display: flex;
   justify-content: space-around; 
-  margin: -80.2vh auto auto 31vw;
+  margin: -85.2vh auto auto 31vw;
   height: 4.7vh;
   width: 53.05vw;
 }
@@ -13,18 +13,18 @@ body {
 
 #navBar a {
   color: rgb(109, 119, 129);
-  font-size: 22px;
+  font-size: 20px;
   text-decoration: none;
   padding-top: 1.2vh;
 
-  transition: 0.5s ease all;
+  transition: 0.3s ease all;
 }
 
 #navBar a:hover {
   border-bottom: 1px solid red;
 }
 
-#app {;
+#app {
   margin: 5vh auto auto 15vw;
   height: 80vh;
   width: 15.3vw;
@@ -32,15 +32,37 @@ body {
 }
 
 #dataDiv {
-  border: 1px solid rgb(0, 68, 255);
-  margin: 1.2vh auto auto 31vw;
+  display: flex;
+  margin: 6vh auto auto 34vw;
   height: 40vh;
-  width: 53.05vw;
+  width: 45vw;
   overflow-y: auto;
 }
 
+#repCrds {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.card {
+  background-color: rgb(25, 29, 35);
+
+}
+
+.card-body {
+  background-color: rgb(10, 13, 19);
+  color: rgb(200, 209, 217);
+  font-size: 15px;
+}
+
+.card-body h5 {
+  color: rgb(89, 166, 255);
+}
+
 #formCreate {
-  border: 1px solid rgb(229, 255, 0);
   margin: 1.2vh auto auto 31vw;
   height: 32.4vh;
   width: 53.05vw;
@@ -49,7 +71,7 @@ body {
 footer {
   display: flex;
   justify-content: space-around;
-  margin: 4.9vh auto auto 15vw;
+  margin: 20vh auto 15px -15vw;
   height: 4.7vh;
   width: 69.1vw;
 }
@@ -57,7 +79,7 @@ footer {
 footer p {
   color: rgb(109, 119, 129);
   font-size: 12px;
-  padding-top: 0.5vh;
+  padding-top: 1.5vh;
 }
 
 footer a {
@@ -70,12 +92,13 @@ footer a {
 #profile {
   height: 100%;
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   background-color: rgb(15, 18, 24);
   color: rgb(200, 209, 217);
-  padding-left: 2.5vw;
+  padding: 1vh auto auto 5vw;
+  padding-left: 5vw;
   padding-top: 1vh;
-  line-height: 12px;
+  line-height: 14px;
 }
 
 #profile img {
@@ -87,4 +110,58 @@ footer a {
 
 #profile h4 {
   font-size: small;
+}
+
+form label {
+  color: rgb(200, 209, 217);
+  font-weight: bold;
+}
+
+form h4 {
+  color: rgb(200, 209, 217);
+}
+
+form p {
+  color: rgb(134, 142, 152)
+}
+
+form label {
+  color: rgb(200, 209, 217);
+  font-weight: bold;
+}
+
+.mb-3 {
+  width: 800px;
+  padding-left: 2.7vw;
+}
+
+.form-control, .form-control:focus {
+  background-color: rgb(10, 13, 19);
+  color: rgb(200, 209, 217);
+  border: 2px solid rgb(25, 29, 35);
+}
+
+.form-control::placeholder {
+  color: rgb(200, 209, 217);
+}
+
+
+button {
+  background-color: rgb(35, 134, 54);
+  border-radius: 10px;
+  color: white;
+  padding: 8px 20px;
+  font-weight: 500;
+  border-style: none;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list-group-item {
+  background-color: rgb(10, 13, 19);
+  color: rgb(200, 209, 217);
+  border: 2px solid rgb(25, 29, 35);
 }

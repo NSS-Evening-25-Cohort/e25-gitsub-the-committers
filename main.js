@@ -30,7 +30,7 @@ const projects =  [
   {
     id: 2,
     Name: "Funkadelic Soundwaves",
-    Des: "Gathering data from the icons of the disco era to assess the effects of the true freedom revolution on the descendatnts of its stars"
+    Des: "Gathering data from the icons of the disco era to assess the effects of the true freedom revolution on the descendants of its stars."
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ const renderToDom = (profiles) => {
   }
   let projString = "";
   for ( const project of projects) { 
-    projString += `<div id="projcard" class="card" style="width: 18rem;">
+    projString += `<div id="projcard" class="card">
   <div class="card-body">
     <h5 class="card-title">${project.Name}</h5>
     <p class="card-text">${project.Des}</p>
