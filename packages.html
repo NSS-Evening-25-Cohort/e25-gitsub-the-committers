@@ -8,6 +8,7 @@
     <title>Github Packages</title>
 </head>
 <body>
+    <div id="app"></div>
     <header id="navBar">
         <a href="./overview.html">Overview</a>
         <a href="./repos.html">Repositories</a>
@@ -15,13 +16,14 @@
         <a href="./packages.html">Packages</a>
     </header>
     
+
+
+    
     <div id="dataDiv">
-        <div id="prjCrds" class="currentPrjs"></div>
-    </div>
+        <div id="packages"></div>
+</div>
 
-    <div id="app"></div> <!-- Renders profile -->
-    <div id="packages"></div> <!-- Renders packages -->
-
+<div id="formCreate">
     <div id="create-project-form">
         <form>
             <h4>Create a new package</h4>
@@ -37,6 +39,7 @@
             <button type="button" id="create-package-btn">Create package</button>
         </form>
     </div>
+</div>
 
     <footer>
         <p>&#169 2021 GitHub, Inc.</p>

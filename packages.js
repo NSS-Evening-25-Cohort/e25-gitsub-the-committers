@@ -31,15 +31,12 @@ const packages = [
     }
 ];
 
-/*
-========================== Render Packages to DOM ==========================
-*/
 const renderPackagesToDOM = (divID, array) => {
     let domString = "";
 
-    // Looping through array
+ 
     array.forEach(package => {
-        // Store HTML to domString
+ 
         domString += `
         <div class="card">
             <div class="card-body">
@@ -51,36 +48,32 @@ const renderPackagesToDOM = (divID, array) => {
         `;
     });
 
-    // Target divID
+
     const package = document.querySelector(divID);
-    // Render to DOM
+
     package.innerHTML = domString;
 };
 
-// Render to DOM
+
 renderPackagesToDOM("#packages", packages);
 
-/*
-========================== Create Package ==========================
-*/
+
 const createPackage = (event) => {
     event.preventDefault();
 
-    // New package
+
     const newPackage = {
         id: packages.length + 1,
         packageName: document.querySelector("#package-name").value,
         description: document.querySelector("#package-description").value
     }
 
-    // Push new package to packages
+
     packages.push(newPackage);
-    // console.log(newPackage);
-    // Render packages to DOM
+
     renderPackagesToDOM("#packages", packages);
-    // Reset the form
+
     document.querySelector('form').reset();
 }
 
-// Event listener
 document.querySelector("#create-package-btn").addEventListener("click", createPackage);
